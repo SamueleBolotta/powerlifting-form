@@ -1,88 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Powerlifting Submission Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #333;
-      color: white;
-    }
-    .form-container {
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      background: #222;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
-    .form-container h1 {
-      text-align: center;
-      color: #ffcc00;
-    }
-    label {
-      display: block;
-      margin: 15px 0 5px;
-    }
-    input, select, textarea, button {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 4px;
-    }
-    button {
-      background: #ffcc00;
-      color: black;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #ff9900;
-    }
-  </style>
-</head>
-<body>
-  <div class="form-container">
-    <h1>Powerlifting Submission Form</h1>
-    <form method="POST" netlify>
-      <!-- Hidden input for Netlify form detection -->
-      <input type="hidden" name="form-name" value="Powerlifting Submission">
+<form action="https://formspree.io/f/your-form-id" method="POST">
+  <label for="name">Name (required)</label>
+  <input type="text" id="name" name="name" required>
 
-      <!-- Name field -->
-      <label for="name">Name (required)</label>
-      <input type="text" id="name" name="name" required>
+  <label for="email">Email (required)</label>
+  <input type="email" id="email" name="email" required>
 
-      <!-- Email field -->
-      <label for="email">Email (required)</label>
-      <input type="email" id="email" name="email" required>
+  <label for="lift">Lift Being Submitted</label>
+  <select id="lift" name="lift" required>
+    <option value="squat">Squat</option>
+    <option value="bench">Bench Press</option>
+    <option value="deadlift">Deadlift</option>
+  </select>
 
-      <!-- Lift type -->
-      <label for="lift">Lift Being Submitted</label>
-      <select id="lift" name="lift" required>
-        <option value="squat">Squat</option>
-        <option value="bench">Bench Press</option>
-        <option value="deadlift">Deadlift</option>
-      </select>
+  <label for="weight">Weight Lifted, Reps, and RPE/%</label>
+  <input type="text" id="weight" name="weight" required>
 
-      <!-- Weight/Reps/RPE -->
-      <label for="weight">Weight Lifted, Reps, and RPE/%</label>
-      <input type="text" id="weight" name="weight" required>
+  <label for="driveLink">Link to Lifting Video (required)</label>
+  <input type="url" id="driveLink" name="driveLink" placeholder="https://drive.google.com/..." required>
 
-      <!-- Drive link -->
-      <label for="driveLink">Link to Lifting Video (required)</label>
-      <input type="url" id="driveLink" name="driveLink" placeholder="https://drive.google.com/..." required>
+  <label for="comments">Additional Comments</label>
+  <textarea id="comments" name="comments" rows="4"></textarea>
 
-      <!-- Comments -->
-      <label for="comments">Additional Comments</label>
-      <textarea id="comments" name="comments" rows="4"></textarea>
-
-      <!-- Submit button -->
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-</body>
-</html>
+  <button type="submit">Submit</button>
+</form>
