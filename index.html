@@ -48,32 +48,40 @@
 <body>
   <div class="form-container">
     <h1>Powerlifting Submission Form</h1>
-    <form action="https://heartfelt-banoffee-53895f.netlify.app/thank-you.html" method="POST" netlify>
+    <form action="thank-you.html" method="POST" netlify>
+      <!-- Hidden input for Netlify form detection -->
       <input type="hidden" name="form-name" value="Powerlifting Submission">
-      
+
+      <!-- Name field -->
       <label for="name">Name (required)</label>
       <input type="text" id="name" name="name" required>
-      
+
+      <!-- Email field -->
       <label for="email">Email (required)</label>
       <input type="email" id="email" name="email" required>
-      
+
+      <!-- Lift type -->
       <label for="lift">Lift Being Submitted</label>
       <select id="lift" name="lift" required>
         <option value="squat">Squat</option>
         <option value="bench">Bench Press</option>
         <option value="deadlift">Deadlift</option>
       </select>
-      
+
+      <!-- Weight/Reps/RPE -->
       <label for="weight">Weight Lifted, Reps, and RPE/%</label>
       <input type="text" id="weight" name="weight" required>
-      
+
+      <!-- Drive link -->
       <label for="driveLink">Link to Lifting Video (required)</label>
       <input type="url" id="driveLink" name="driveLink" placeholder="https://drive.google.com/..." required>
-      
+
+      <!-- Comments -->
       <label for="comments">Additional Comments</label>
       <textarea id="comments" name="comments" rows="4"></textarea>
-      
-      <button type="submit">Send</button>
+
+      <!-- Submit button -->
+      <button type="submit">Submit</button>
     </form>
   </div>
 </body>
